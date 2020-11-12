@@ -1,0 +1,67 @@
+<head>
+    <meta charset="UTF-8" />
+    <title>Venta de Ositos</title>
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
+    <!-- BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- SCROOLL REVEAL JS LIBRARY CDN -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Venta Ositos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="#header">Inicio</a>
+            <a class="nav-item nav-link" href="#info-one">Producto</a>
+            <a class="nav-item nav-link" href="#Crud">Crud</a>
+        </div>
+    </div>
+</nav>
+
+<section id="header">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div class="header-content-left">
+                    <img src="osito3.jpg" style="width: 100%;">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="header-content-right">
+                    <h1 class="display-4">Los mejores ositos de peluches aqui</h1>
+                    <p class="mt-5">Gracias por preferir nuestros peluches !</p>
+                    <a href="#" class="btn btn-outline-secondary header-btn btn-lg mt-2">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <!-- FORM -->
+        <div class="col-md-5 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Editar Ositos</h5>
+                    <form action="/update/<%= task._id %>" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="title" placeholder="Inserta un título" class="form-control" value="<%= task.title %>">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="description" cols="80" placeholder="Inserta una descripción" class="form-control"><%= task.description %></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Actualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
